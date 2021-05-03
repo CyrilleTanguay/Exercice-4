@@ -12,6 +12,14 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+	<div class="widget-footer">
+	<?php if(is_active_sidebar('footer-1')): ?>
+		<?php dynamic_sidebar('footer-1'); ?>
+		<?php endif; ?>
+		<section class="adresse">
+		<p>Affiche</p>
+		</section>
+	</div>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'theme4w4' ) ); ?>">
 				<?php
