@@ -235,7 +235,7 @@ function extraire_projet($query){
 		$query->set('orderby', 'title');
 		$query->set('order', 'asc');
 	}
-
+	add_action('pre_get_posts', 'extraire_projet' );
 }
 function extraire_mes_projets($query){
 	if ($query->is_category('Mes projets'))
@@ -266,7 +266,7 @@ function extraire_projet_archive($query){
 
 	$query->set( 'category_name', 'projet' );
 	$query->set('posts_per_page', -1 );
-	$query->set('meta_key', 'type_de_projet');
+	$query->set('meta_key', 'type_de_cours');
 	$query->set('orderby', array( 'meta_value' => 'DESC', 'title' => 'ASC' ));
 }
 }
